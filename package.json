@@ -40,6 +40,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "reactSnap":{
+    "include":["/charts","/react-tabs"]
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
