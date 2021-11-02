@@ -7,6 +7,7 @@ import RoutedTabsDynamic from './routed-tabs/dynamic'
 import WithReactTabs from './with-react-tabs'
 
 import './style.scss'
+import {Helmet} from "react-helmet";
 
 export default function ReactTabs(props) {
   const parentPath = props.match.path;
@@ -28,6 +29,11 @@ export default function ReactTabs(props) {
   ]
 
   return (
+      <>
+        <Helmet>
+          <title>ReactTabs</title>
+          <meta name="description" content="Nested component" />
+        </Helmet>
     <div className="react-tabs">
       <Header postUrl="https://www.devaradise.com/react-tabs-tutorial"/>
       <div className="page-container container">
@@ -46,5 +52,6 @@ export default function ReactTabs(props) {
       </div>
 
     </div>
+      </>
   )
 }

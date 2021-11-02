@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from 'react-helmet';
 import Header from 'layouts/Header'
 import Tabs from 'components/Tabs'
 
@@ -53,6 +54,11 @@ export default function Charts(props) {
   ]
 
   return (
+    <>
+      <Helmet>
+        <title>Charts</title>
+        <meta name="description" content="Nested component" />
+      </Helmet>
     <div>
       <Header postUrl="https://www.devaradise.com/best-react-chart-graph-libraries"/>
       <div className="page-container container text-center">
@@ -64,7 +70,7 @@ export default function Charts(props) {
           <Tabs data={tabsData} parentPath={parentPath}></Tabs>
         </div>
       </div>
-
     </div>
+    </>
   )
 }
